@@ -63,15 +63,25 @@ public class MainServlet extends HttpServlet {
         .append("<head>")
         .append("<meta charset=\"UTF-8\">")
         .append("<title>Adopt A Pet!</title>")
-        .append("<style>")
-        .append("</style>")
+        .append(getCSS())
         .append("</head>")
         .append("<body>")
-        .append("<div>")
         .append("<h2>Adopt A Pet!</h2>")
         .append("<br />")
         .append("<h3>Choose a pet...</h3>")
-        .append("</div>")
+        .toString();
+  }
+
+  static String getCSS() {
+    return new StringBuilder()
+        .append("<style>")
+        .append("body {")
+        .append("max-width: 700px;")
+        .append("margin: auto;")
+        .append("align-content: center; }")
+        .append("h1, h2, h3 { text-align: center; margin: auto; }")
+        .append("table { margin: auto; }")
+        .append("</style>")
         .toString();
   }
 

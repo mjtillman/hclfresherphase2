@@ -24,8 +24,11 @@ public class DetailServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
 
+      String style = MainServlet.getCSS();
+
       int pet_id = Integer.parseInt(request.getParameter("pet_id"));
       PrintWriter out = response.getWriter();
+      out.println("<html>" + style + "<body>");
 
       InputStream in = getServletContext().getResourceAsStream("/WEB-INF/config.properties");
       Properties props = new Properties();

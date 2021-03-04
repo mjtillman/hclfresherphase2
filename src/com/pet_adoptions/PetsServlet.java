@@ -24,8 +24,11 @@ public class PetsServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
+
+      String style = MainServlet.getCSS();
+
       PrintWriter out = response.getWriter();
-      out.println("<html><body>");
+      out.println("<html>" + style + "<body>");
 
       InputStream in = getServletContext().getResourceAsStream("/WEB-INF/config.properties");
       Properties props = new Properties();
