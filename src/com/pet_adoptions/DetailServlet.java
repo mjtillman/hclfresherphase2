@@ -13,10 +13,9 @@ import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Enumeration;
 import java.util.Properties;
 
-@WebServlet("/details")
+@WebServlet("/pet_details")
 public class DetailServlet extends HttpServlet {
 
   public DetailServlet() {}

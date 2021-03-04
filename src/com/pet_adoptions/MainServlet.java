@@ -34,7 +34,7 @@ public class MainServlet extends HttpServlet {
       Statement stmt = conn.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
       ResultSet rst = stmt.executeQuery("SELECT * FROM pets;");
 
-      out.println("<form action=\"details\" method=\"post\">");
+      out.println("<form action=\"pet_details\" method=\"post\">");
       out.println("<table><tr height=\"80\">");
 
       while (rst.next()) {
